@@ -17,7 +17,7 @@ Optimization such as container caching can not fundamentally solve the problem, 
 Goals:
 
 > * Maximize the `resource utilization` and `efficiency` through **hierarchical scheduling** and **container sharing**
-> * Minimize `performance loss` due highly-concurrent bursty function workloads viar **transient resource scaling-up**
+> * Minimize `performance loss` due to highly-concurrent bursty function workloads via **transient resource scaling-up**
 
 Overview:
 
