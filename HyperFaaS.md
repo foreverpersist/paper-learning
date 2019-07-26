@@ -2,11 +2,11 @@
 
 ## Problem
 
-State-of-art open-source platform (Alex Ellis, Fission) heavily rely on container orchestration frameworks such as Kubernetes for container resource scheduling, which is orginally designed for managing long-running applications such as Memcached. Kubernetes' container scheduling and auto-scaling protocol is too heavyweight to realize instant resource provisioning
+State-of-art open-source platform ([Alex Ellis](https://goo.gl/c8mnD2), [Fission](https://goo.gl/VJKbGV)) heavily rely on container orchestration frameworks such as Kubernetes for container resource scheduling, which is orginally designed for managing `long-running` applications such as Memcached. Kubernetes' container scheduling and auto-scaling protocol is too `heavyweight` to realize `instant` resource provisioning
 
 ## Scene
 
-Bursty Workloads:
+**Bursty Workloads**:
 
 Highly-concurrent function workload sees reduced response time after 40 seconds and stabilizes after 120 seconds
 
@@ -16,8 +16,8 @@ Optimization such as container caching can not fundamentally solve the problem, 
 
 Goals:
 
-> * Maximize the resource utilization and efficiency through hierarchical scheduling and container sharing
-> * Minimize performance loss due highly-concurrent bursty function workloads viar transient resource scaling-up
+> * Maximize the `resource utilization` and `efficiency` through **hierarchical scheduling** and **container sharing**
+> * Minimize `performance loss` due highly-concurrent bursty function workloads viar **transient resource scaling-up**
 
 Overview:
 
@@ -33,7 +33,7 @@ Overview:
 	| |   Scheduler  | |    | |   Scheduler  | |
 	| ---------------- |    | ---------------- |
 	| ---------------- |    | ---------------- |
-	| |  Function A  | |    | |  Function A  | |
+	| |  Function A  | |    | |  Function B  | |
 	| ---------------- |    | ---------------- |
 	| ---------------- |    | ---------------- |
 	| |   Generic    | |    | |   Generic    | |
